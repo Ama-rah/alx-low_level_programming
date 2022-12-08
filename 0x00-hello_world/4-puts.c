@@ -1,23 +1,13 @@
 #include <stdio.h>
 
 /**
+ * main - Entry point
  *
- *  * main - Entry point
- *
- *   *
- *
- *    * Return: Always 0 (Success)
- *
- *     * Used puts instead of printf
- *
- *      */
-
+ * Return: Always 0 (Success)
+ * Used puts instead of printf
+ * */
 int main(void)
-
 {
-
-		puts("\"Programming is like building a multilingual puzzle");
-
-			return (0);
-
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
