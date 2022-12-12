@@ -14,13 +14,18 @@ int main(void)
 
 	for (alph = 0; alph < 9; alph++)
 	{
-		putchar((alph % 10) + '0');
-		putchar((q % 10) + '0');
-
-		if (alph != 8)
+		for (d = ch + 1; d < 10; d++)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar((alph % 10) + '0');
+			putchar((q % 10) + '0');
+
+			if (alphh != 8)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			else
+				continue;
 		}
 	}
 	putchar(10);
