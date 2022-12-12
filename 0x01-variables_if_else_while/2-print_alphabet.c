@@ -2,21 +2,19 @@
 
 /**
  * main - a program that prints the alphabet in lowercase,
- * 	and then in uppercase, followed by a new line.
+ *	and then in uppercase, followed by a new line.
  *
- * 	Return: Always 0
+ * Return: Always 0
  */
+
 int main(void)
 {
-	int ch;
+	int alph = 'a';
 
-	for (ch = 97; ch <= 122; ch++)
+	while (alph <= 'z')
 	{
-		putchar(ch);
-	}
-	for (ch = 65; ch <= 90; ch++)
-	{
-		putchar(ch);
+		putchar(alph);
+		++alph
 	}
 	putchar('\n');
 	return (0);
