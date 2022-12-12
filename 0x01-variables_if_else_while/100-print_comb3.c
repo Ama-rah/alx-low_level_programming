@@ -14,12 +14,12 @@ int main(void)
 
 	for (alph = 0; alph < 9; alph++)
 	{
-		for (d = ch + 1; d < 10; d++)
+		for (q = alph + 1; q < 10; q++)
 		{
 			putchar((alph % 10) + '0');
 			putchar((q % 10) + '0');
 
-			if (alphh != 8)
+			if (alph != 8)
 			{
 				putchar(',');
 				putchar(' ');
