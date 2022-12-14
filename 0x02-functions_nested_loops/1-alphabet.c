@@ -1,11 +1,11 @@
 #include "main.h"
 
- /**
-  * print_alphabet - Prints alphabets in lowercase
-  *	followed by a new line.
-  *
-  * Return: Always 0 (Sucess)
-  */
+/**
+ * print_alphabet - Prints alphabets in lowercase
+ *	followed by a new line.
+ *
+ * Return: Always 0 (Success)
+ */
 
 void print_alphabet(void)
 {
