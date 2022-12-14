@@ -9,6 +9,7 @@
 int main(void)
 {
 	int ab;
+
 	for (ab = 'a'; ab <= 'c'; ab++)
 		_putchar(ab);
 	_putchar('\n');
