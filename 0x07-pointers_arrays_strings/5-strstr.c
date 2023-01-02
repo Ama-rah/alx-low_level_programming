@@ -7,32 +7,21 @@
  * @haystack: input string to search for matching
  *	substrings
  * @needle: subtring to search for
- *	of the located substring or
- *	NULL if the substring is not found
+ *
+ * Return: pointer or NULL
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	/**
-	 * we initialize a helping variable
-	 * to assist in returning one of
-	 * our parameters pointers haystack
-	 */
-	char *h, *n;
-
-	while (*haystack != '\0')
+	int i, j;
 	{
-		h = haystack;
-		n = needle;
-		while (*n != '\0' && *haystack == *n)
+		for (j = 0; needle[j] != '\0'; j++)
 		{
-			haystack++;
-			n++;
+			if (haystack[i + j] != needle[j])
+				break;
 		}
-		if (!*n)
-			return (h);
-		haystack++;
+		if (!needle[j])
+			return (&haystack[i]);
 	}
-
-	return ('\0');
+	return (NULL);
 }
