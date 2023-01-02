@@ -2,11 +2,10 @@
 #include <stdio.h>
 
 /**
- * _strstr - a function that locates a substring
+ * _strstr - Function that locates a substring.
  *
- * @haystack: input string to search for matching
- *	substrings
- * @needle: subtring to search for
+ * @haystack: parameter to search in
+ * @needle: substring to search for
  *
  * Return: pointer or NULL
  */
@@ -14,6 +13,8 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
+
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		for (j = 0; needle[j] != '\0'; j++)
 		{
