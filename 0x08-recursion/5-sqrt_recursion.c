@@ -3,6 +3,7 @@
 /**
  * power_operation - returns the natural square root of a number.
  * @n: input number.
+ * @c: iterator.
  * Return: square root or -1.
  */
 
