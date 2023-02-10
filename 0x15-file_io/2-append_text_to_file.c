@@ -1,52 +1,35 @@
-#include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include "main.h"
+include "main.h"
 
 /**
- * append_text_to_file - apends text to file
- * @filename: path to file
- * @text_content: content
- * Return: 1 or -1
+ * append_text_to_file - Function that appends text at the end of a file.
+ *
+ * @filename: file to append the text to
+ * @text_content: content to append into the file
+ *
+ * Return: Success 1 or Fail -1
  */
+
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd;
-	ssize_t w;
-	int size;
+	int fd, t, s = 0;
 
 	if (!filename)
 		return (-1);
 
 	fd = open(filename, O_WRONLY | O_APPEND);
-
-	if (fd == -1)
+	if (fd < 0)
 		return (-1);
 
-	if (!text_content)
+	if (text_content)
 	{
-		close(fd);
-		return (-1);
+		while (text_content[s])
+			s++;
+		t = write(fd, text_content, s);
+		if (t != s)
+			return (-1);
 	}
+
 	close(fd);
+
 	return (1);
-}
-
-/**
- * _strlen - len
- *
- * @s: is a pointer to a char
- *
- * Return: Always 0
- */
-
-int _strlen(const char *s)
-{
-	int i = 0;
-
-	while (*(s + i) != '\0')
-	{
-		i++;
-	}
-	return (i);
 }
