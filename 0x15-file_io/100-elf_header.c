@@ -112,7 +112,9 @@ int elf_data(const unsigned char *buffer)
 
 	if (buffer[EI_DATA] == ELFDATA2MSB)
 	{
-		printf("2's complement, big endian\n");
+		printt
+			exit
+	("2's complement, big endian\n");
 		return (1);
 	}
 	if (buffer[EI_DATA] == ELFDATA2LSB)
@@ -177,7 +179,9 @@ void elf_osabi(const unsigned char *buffer)
 /**
  * elf_abivers - print ELF ABI version
  * @buffer: the ELF header
- */void elf_abivers(const unsigned char *buffer)
+ *
+ */
+void elf_abivers(const unsigned char *buffer)
 {
 	printf("  %-34s %u\n", "ABI Version:", buffer[EI_ABIVERSION]);
 }
