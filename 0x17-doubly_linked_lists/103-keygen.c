@@ -1,4 +1,3 @@
-lines (112 sloc)  2.08 KB
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
